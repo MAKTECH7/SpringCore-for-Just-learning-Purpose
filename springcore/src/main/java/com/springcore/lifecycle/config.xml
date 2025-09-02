@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!-- this is our bean 
+<context:annotation-config/>  this is for every annotations and the way we are declaring by using bean
+is a different way for using annotations that we must have to add package name with full 
+qualified name and then using dot and thenn class name which CommonAnnotationBeanPostProcessor
+
+<bean class="com.springcore.lifecycle.Samosa" name="S1" init-method="Hey" destroy-method="Bye">
+
+	<property name="price" value="10" />
+
+</bean>
+
+<bean class="com.springcore.lifecycle.Pepsi" name="P1">
+	<property name="price" value="5"/>
+
+</bean>
+
+-->
+<bean class="com.springcore.lifecycle.Example" name="example">
+	<property name="subject" value="Maths"/>
+</bean>
+
+
+<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
+</bean>
+
+</beans>
